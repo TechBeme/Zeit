@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import GlowCard from "./GlowCard";
 import { useDictionary } from "@/i18n/DictionaryProvider";
@@ -13,6 +13,7 @@ export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
     const [langOpen, setLangOpen] = useState(false);
+    const langRef = useRef<HTMLDivElement>(null);
 
     const NAV_LINKS = [
         { label: dict.navbar.home, href: "#inicio" },
@@ -25,6 +26,17 @@ export default function Navbar() {
         window.addEventListener("scroll", onScroll, { passive: true });
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
+
+    useEffect(() => {
+        if (!langOpen) return;
+        const handleClickOutside = (e: MouseEvent) => {
+            if (langRef.current && !langRef.current.contains(e.target as Node)) {
+                setLangOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [langOpen]);
 
     const handleNav = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
@@ -98,8 +110,17 @@ export default function Navbar() {
                     </GlowCard>
                 </div>
 
-                {/* Language Switcher — desktop */}
-                <div className="hidden md:flex items-center ml-auto relative">
+                {/* Contact + Language Switcher — desktop */}
+                <div ref={langRef} className="hidden md:flex items-center ml-auto gap-3 relative">
+                    <a
+                        href="mailto:guilherme.vieira@zeitit.com"
+                        className="flex items-center gap-2 rounded-full border border-[#f6be39]/30 bg-[#f6be39]/10 px-4 py-1.5 text-xs font-normal uppercase tracking-widest text-[#f6be39] backdrop-blur-xl transition-all hover:bg-[#f6be39]/20 hover:border-[#f6be39]/50 font-[family-name:var(--font-label)]"
+                    >
+                        <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                            <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.5-9.75-6.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        {dict.navbar.contact}
+                    </a>
                     <button
                         type="button"
                         onClick={() => setLangOpen(!langOpen)}
@@ -167,6 +188,18 @@ export default function Navbar() {
                                 </a>
                             </li>
                         ))}
+                        {/* Mobile contact button */}
+                        <li className="pt-2">
+                            <a
+                                href="mailto:guilherme.vieira@zeitit.com"
+                                className="flex items-center gap-2 rounded-full border border-[#f6be39]/30 bg-[#f6be39]/10 px-6 py-2 text-xs font-normal uppercase tracking-widest text-[#f6be39] transition-all hover:bg-[#f6be39]/20 hover:border-[#f6be39]/50 font-[family-name:var(--font-label)]"
+                            >
+                                <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                                    <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.5-9.75-6.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                                {dict.navbar.contact}
+                            </a>
+                        </li>
                         {/* Mobile language switcher */}
                         <li className="flex items-center gap-4 pt-2 border-t border-[#4f4634]/15">
                             {i18n.locales.map((loc) => (

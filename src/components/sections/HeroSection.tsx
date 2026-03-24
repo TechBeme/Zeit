@@ -61,14 +61,6 @@ export default function HeroSection() {
         []
     );
 
-    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
     // Measure button for SVG overlay
     useEffect(() => {
         const el = btnRef.current;
@@ -185,97 +177,100 @@ export default function HeroSection() {
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
                     className="relative mt-8"
                 >
-                    {/* Soft diffused glow behind button — like a warm shadow */}
                     <div
-                        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                        className="relative inline-block"
                         style={{
-                            width: 280,
-                            height: 120,
-                            background: 'radial-gradient(ellipse 50% 45% at 50% 50%, rgba(246, 190, 57, 0.08) 0%, rgba(246, 190, 57, 0.03) 40%, transparent 100%)',
-                            filter: 'blur(20px)',
-                        }}
-                    />
-                    {/* SVG animated border — two dots from bottom center meeting at top */}
-                    {btnSize.w > 0 && (() => {
-                        const W = btnSize.w;
-                        const H = btnSize.h;
-                        const R = H / 2;
-                        // Right half: bottom-center → right edge → right semicircle → top-center
-                        const rightPath = [
-                            `M ${W / 2} ${H}`,
-                            `L ${W - R} ${H}`,
-                            `A ${R} ${R} 0 0 0 ${W - R} 0`,
-                            `L ${W / 2} 0`,
-                        ].join(' ');
-                        // Left half: bottom-center → left edge → left semicircle → top-center
-                        const leftPath = [
-                            `M ${W / 2} ${H}`,
-                            `L ${R} ${H}`,
-                            `A ${R} ${R} 0 0 1 ${R} 0`,
-                            `L ${W / 2} 0`,
-                        ].join(' ');
-
-                        return (
-                            <svg
-                                className="pointer-events-none absolute inset-0 z-20"
-                                width={W}
-                                height={H}
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    ref={rightRef}
-                                    d={rightPath}
-                                    stroke="rgba(246,190,57,0.45)"
-                                    strokeWidth={1.5}
-                                    strokeLinecap="round"
-                                    pathLength={1}
-                                    strokeDasharray={1}
-                                    strokeDashoffset={1}
-                                    fill="none"
-                                />
-                                <path
-                                    ref={leftRef}
-                                    d={leftPath}
-                                    stroke="rgba(246,190,57,0.45)"
-                                    strokeWidth={1.5}
-                                    strokeLinecap="round"
-                                    pathLength={1}
-                                    strokeDasharray={1}
-                                    strokeDashoffset={1}
-                                    fill="none"
-                                />
-                            </svg>
-                        );
-                    })()}
-                    <a
-                        ref={btnRef}
-                        href="#solucoes"
-                        onClick={(e) => handleScroll(e, "#solucoes")}
-                        onMouseMove={handleBtnMouseMove}
-                        onMouseEnter={() => setBtnHovered(true)}
-                        onMouseLeave={() => setBtnHovered(false)}
-                        className="relative z-10 inline-block rounded-full px-12 py-3.5 text-sm font-normal uppercase tracking-widest text-[#c6c6cf]/70 font-[family-name:var(--font-label)] backdrop-blur-sm"
-                        style={{
-                            background: 'radial-gradient(ellipse 80% 80% at 50% 40%, #2a2a2a 0%, #1a1a1a 50%, #111111 100%)',
-                            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                            transition: 'transform 0.3s ease',
                             transform: btnHovered ? 'scale(1.06)' : 'scale(1)',
-                            boxShadow: btnHovered
-                                ? '0 8px 30px -6px rgba(12,12,12,0.7), inset 0 1px 0 0 rgba(229,226,225,0.06)'
-                                : '0 4px 16px -4px rgba(12,12,12,0.5), inset 0 1px 0 0 rgba(229,226,225,0.04)',
                         }}
                     >
-                        {/* Inner glow: soft center default, follows mouse on hover */}
-                        <span
-                            className="pointer-events-none absolute inset-0 rounded-[inherit] transition-all duration-300"
+                        {/* Soft diffused glow behind button — like a warm shadow */}
+                        <div
+                            className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
                             style={{
-                                background: btnHovered
-                                    ? `radial-gradient(80px circle at ${btnMouse.x}px ${btnMouse.y}px, rgba(246, 190, 57, 0.08), transparent 100%)`
-                                    : 'radial-gradient(60px circle at 50% 50%, rgba(246, 190, 57, 0.05), transparent 100%)',
+                                width: 280,
+                                height: 120,
+                                background: 'radial-gradient(ellipse 50% 45% at 50% 50%, rgba(246, 190, 57, 0.08) 0%, rgba(246, 190, 57, 0.03) 40%, transparent 100%)',
+                                filter: 'blur(20px)',
                             }}
                         />
-                        <span className="relative z-10">{dict.hero.cta}</span>
-                    </a>
+                        {/* SVG animated border — two dots from bottom center meeting at top */}
+                        {btnSize.w > 0 && (() => {
+                            const W = btnSize.w;
+                            const H = btnSize.h;
+                            const R = H / 2;
+                            // Right half: bottom-center → right edge → right semicircle → top-center
+                            const rightPath = [
+                                `M ${W / 2} ${H}`,
+                                `L ${W - R} ${H}`,
+                                `A ${R} ${R} 0 0 0 ${W - R} 0`,
+                                `L ${W / 2} 0`,
+                            ].join(' ');
+                            // Left half: bottom-center → left edge → left semicircle → top-center
+                            const leftPath = [
+                                `M ${W / 2} ${H}`,
+                                `L ${R} ${H}`,
+                                `A ${R} ${R} 0 0 1 ${R} 0`,
+                                `L ${W / 2} 0`,
+                            ].join(' ');
+
+                            return (
+                                <svg
+                                    className="pointer-events-none absolute inset-0 z-20"
+                                    width={W}
+                                    height={H}
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        ref={rightRef}
+                                        d={rightPath}
+                                        stroke="rgba(246,190,57,0.45)"
+                                        strokeWidth={1.5}
+                                        strokeLinecap="round"
+                                        pathLength={1}
+                                        strokeDasharray={1}
+                                        strokeDashoffset={1}
+                                        fill="none"
+                                    />
+                                    <path
+                                        ref={leftRef}
+                                        d={leftPath}
+                                        stroke="rgba(246,190,57,0.45)"
+                                        strokeWidth={1.5}
+                                        strokeLinecap="round"
+                                        pathLength={1}
+                                        strokeDasharray={1}
+                                        strokeDashoffset={1}
+                                        fill="none"
+                                    />
+                                </svg>
+                            );
+                        })()}
+                        <a
+                            ref={btnRef}
+                            href="mailto:guilherme.vieira@zeitit.com"
+                            onMouseMove={handleBtnMouseMove}
+                            onMouseEnter={() => setBtnHovered(true)}
+                            onMouseLeave={() => setBtnHovered(false)}
+                            className="relative z-10 inline-flex items-center gap-2.5 rounded-full px-12 py-3.5 text-sm font-normal uppercase tracking-widest text-[#f6be39]/80 font-[family-name:var(--font-label)] transition-colors hover:text-[#f6be39] backdrop-blur-md"
+                        >
+                            <span
+                                className="pointer-events-none absolute inset-0 rounded-[inherit] transition-opacity duration-300"
+                                style={{
+                                    opacity: btnHovered ? 1 : 0,
+                                    background: `radial-gradient(80px circle at ${btnMouse.x}px ${btnMouse.y}px, rgba(255, 255, 255, 0.12), transparent 100%)`,
+                                }}
+                            />
+                            <span className="relative z-10 inline-flex items-center gap-2.5">
+                                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="M22 4L12 13 2 4" />
+                                </svg>
+                                {dict.hero.cta}
+                            </span>
+                        </a>
+                    </div>
                 </motion.div>
             </div>
 

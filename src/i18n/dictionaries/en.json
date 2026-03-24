@@ -9,13 +9,15 @@
         "home": "HOME",
         "solutions": "SOLUTIONS",
         "about": "ABOUT",
+        "contact": "CONTACT",
         "openMenu": "Open menu"
     },
     "hero": {
         "title1": "Connecting",
         "title2": "your business",
         "subtitle": "at the right time",
-        "cta": "LEARN MORE"
+        "cta": "GET IN TOUCH",
+        "contact": "GET IN TOUCH"
     },
     "solutions": {
         "title": "Solutions",
@@ -63,10 +65,6 @@
                 "label": "Km of Fiber Optics"
             }
         ]
-    },
-    "infrastructure": {
-        "title": "INFRASTRUCTURE",
-        "description": "Own fiber optic network with redundancy and high availability."
     },
     "footer": {
         "copyright": "All rights reserved.",

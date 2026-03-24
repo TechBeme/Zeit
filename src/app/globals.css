@@ -5,32 +5,14 @@
   /* Surface hierarchy */
   --color-surface: #131313;
   --color-surface-container-lowest: #0c0c0c;
-  --color-surface-container-low: #1a1a1a;
-  --color-surface-container: #1e1e1e;
-  --color-surface-container-high: #252525;
-  --color-surface-container-highest: #2f2f2f;
-  --color-surface-bright: #383838;
-  --color-surface-variant: #3a3328;
-
   /* Primary (amber) */
   --color-primary: #f6be39;
-  --color-primary-container: #d4a017;
-  --color-on-primary-fixed: #1a1400;
 
   /* Secondary (metallic silver) */
   --color-secondary: #c6c6cf;
-  --color-secondary-fixed: #e2e1eb;
 
   /* On-surface */
   --color-on-surface: #e5e2e1;
-  --color-on-surface-variant: #d3c5ae;
-
-  /* Outline */
-  --color-outline-variant: #4f4634;
-
-  /* Tailwind mappings */
-  --color-background: #131313;
-  --color-foreground: #e5e2e1;
   --font-sans: var(--font-body);
   --font-headline: var(--font-headline);
   --font-label: var(--font-label);
@@ -59,15 +41,4 @@ body {
 ::selection {
   background: transparent;
   color: inherit;
-}
-
-/* Headline gradient: radial "ball" — bright center, dark edges */
-.text-gradient-hero {
-  background: radial-gradient(ellipse 70% 60% at 50% 50%,
-      #d1d3da 0%,
-      #9a9ba3 50%,
-      #565864 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }

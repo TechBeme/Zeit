@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
 
-const FOOTER_HEIGHT = 120; // px the about slides up to reveal footer
+const FOOTER_HEIGHT = 150; // px the about slides up to reveal footer
 const WHEEL_COOLDOWN = 600;
 
 export default function SobreSection() {
@@ -269,6 +269,17 @@ export default function SobreSection() {
                 </div>
                 <p className="text-xs text-[#c6c6cf]/40 font-[family-name:var(--font-body)]">
                     © {new Date().getFullYear()} Zeit. {dict.footer.copyright}
+                </p>
+                <p className="text-xs text-[#c6c6cf]/60 font-[family-name:var(--font-body)]">
+                    {dict.footer.createdBy}{" "}
+                    <a
+                        href="https://github.com/TechBeme/Zeit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#f6be39]/80 hover:text-[#f6be39] transition-colors"
+                    >
+                        Rafael Vieira @techbeme
+                    </a>
                 </p>
             </div>
         </section>

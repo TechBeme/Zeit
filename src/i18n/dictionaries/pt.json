@@ -9,13 +9,15 @@
         "home": "INÍCIO",
         "solutions": "SOLUÇÕES",
         "about": "SOBRE",
+        "contact": "CONTATO",
         "openMenu": "Abrir menu"
     },
     "hero": {
         "title1": "Conectando",
         "title2": "a sua empresa",
         "subtitle": "no tempo certo",
-        "cta": "SAIBA MAIS"
+        "cta": "FALE CONOSCO",
+        "contact": "FALE CONOSCO"
     },
     "solutions": {
         "title": "Soluções",
@@ -63,10 +65,6 @@
                 "label": "Km de Fibra Óptica"
             }
         ]
-    },
-    "infrastructure": {
-        "title": "INFRAESTRUTURA",
-        "description": "Rede própria de fibra óptica com redundância e alta disponibilidade."
     },
     "footer": {
         "copyright": "Todos os direitos reservados.",
