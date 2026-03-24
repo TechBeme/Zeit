@@ -20,6 +20,19 @@ export default function Footer() {
             <p className="mt-6 text-sm text-[#c6c6cf]/40 font-[family-name:var(--font-body)]">
                 © {year} Zeit. {dict.footer.copyright}
             </p>
+
+            {/* Created by */}
+            <p className="mt-3 text-sm text-[#c6c6cf]/30 font-[family-name:var(--font-body)]">
+                {dict.footer.createdBy}{" "}
+                <a
+                    href="https://github.com/TechBeme/Zeit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#f6be39]/50 hover:text-[#f6be39] transition-colors"
+                >
+                    Rafael Vieira @techbeme
+                </a>
+            </p>
         </footer>
     );
 }

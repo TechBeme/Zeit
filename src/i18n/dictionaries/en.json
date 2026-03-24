@@ -69,6 +69,7 @@
         "description": "Own fiber optic network with redundancy and high availability."
     },
     "footer": {
-        "copyright": "All rights reserved."
+        "copyright": "All rights reserved.",
+        "createdBy": "Created by"
     }
 }

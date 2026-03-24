@@ -69,6 +69,7 @@
         "description": "Red propia de fibra óptica con redundancia y alta disponibilidad."
     },
     "footer": {
-        "copyright": "Todos los derechos reservados."
+        "copyright": "Todos los derechos reservados.",
+        "createdBy": "Creado por"
     }
 }
