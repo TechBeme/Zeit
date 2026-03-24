@@ -99,11 +99,18 @@ export async function generateMetadata({
             type: "website",
             locale: ogLocale,
             alternateLocale: alternateLocales as unknown as string[],
+            images: [
+                {
+                    url: "/logo.png",
+                    alt: "Zeit",
+                },
+            ],
         },
         twitter: {
             card: "summary_large_image",
             title: dict.metadata.twitterTitle,
             description: dict.metadata.twitterDescription,
+            images: ["/logo.png"],
         },
         icons: {
             icon: [
