@@ -180,15 +180,12 @@ export default function Navbar() {
                         transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
                         className="fixed inset-0 z-50 flex flex-col md:hidden"
                     >
-                        {/* Backdrop */}
+                        {/* Background image + overlay */}
                         <div
-                            className="absolute inset-0"
-                            style={{
-                                background: "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(30,30,30,0.98) 0%, rgba(12,12,12,0.99) 100%)",
-                                backdropFilter: "blur(24px)",
-                                WebkitBackdropFilter: "blur(24px)",
-                            }}
+                            className="absolute inset-0 bg-cover bg-center"
+                            style={{ backgroundImage: "url(/about.png)" }}
                         />
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#0c0c0c]/90 via-[#131313]/85 to-[#0c0c0c]/95" />
 
                         {/* Ambient glow */}
                         <div
@@ -199,7 +196,7 @@ export default function Navbar() {
                         />
 
                         {/* Navigation content */}
-                        <div className="relative z-10 flex flex-1 flex-col items-center justify-center gap-2 px-8">
+                        <div className="relative z-10 flex h-[50vh] flex-col items-center justify-end gap-2 px-8 pb-0">
                             {NAV_LINKS.map((link, idx) => (
                                 <motion.div
                                     key={link.href}
