@@ -258,7 +258,7 @@ export default function SobreSection() {
 
             {/* Footer — revealed at the bottom when about slides up */}
             <div
-                className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center gap-3 border-t border-[#4f4634]/15 bg-[#0c0c0c] px-6 transition-opacity duration-700"
+                className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center gap-2 sm:gap-3 border-t border-[#4f4634]/15 bg-[#0c0c0c] px-6 pb-[env(safe-area-inset-bottom)] transition-opacity duration-700"
                 style={{ height: `${FOOTER_HEIGHT}px`, opacity: showFooter ? 1 : 0 }}
             >
                 <div className="flex items-center gap-2">

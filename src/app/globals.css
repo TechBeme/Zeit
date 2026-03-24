@@ -31,6 +31,16 @@ html {
   touch-action: none;
 }
 
+/* Use dynamic viewport height on mobile to account for browser chrome */
+@supports (height: 100dvh) {
+  .h-screen {
+    height: 100dvh !important;
+  }
+  .min-h-screen {
+    min-height: 100dvh !important;
+  }
+}
+
 body {
   background: var(--color-surface);
   color: var(--color-on-surface);

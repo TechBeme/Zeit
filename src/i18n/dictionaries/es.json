@@ -1,9 +1,13 @@
 {
     "metadata": {
         "title": "Zeit | Conectando tu negocio en el momento justo",
-        "description": "Soluciones de telecomunicaciones y fibra óptica para empresas y eventos. Conectividad B2B de alto rendimiento.",
-        "ogTitle": "Zeit | Conectando tu negocio en el momento justo",
-        "ogDescription": "Soluciones de telecomunicaciones y fibra óptica para empresas y eventos."
+        "description": "Zeit es una operadora de telecomunicaciones especializada en soluciones corporativas de alto rendimiento. Internet dedicado, fibra óptica punto a punto, data center y firewall gestionado con SLA de 99,5% y soporte 24/7.",
+        "ogTitle": "Zeit | Conectividad Empresarial de Alto Rendimiento",
+        "ogDescription": "Internet dedicado, fibra óptica, data center y firewall gestionado para empresas que no pueden detenerse. SLA 99,5% y soporte 24/7.",
+        "ogImageAlt": "Zeit - Telecomunicaciones Corporativas",
+        "twitterTitle": "Zeit | Conectando tu negocio en el momento justo",
+        "twitterDescription": "Soluciones de telecomunicaciones y fibra óptica para empresas. Internet dedicado con SLA de 99,5% y soporte 24/7.",
+        "keywords": "telecomunicaciones, fibra óptica, internet dedicado, internet empresarial, conectividad B2B, Zeit, data center, colocation, firewall gestionado, fibra punto a punto, SLA 99,5%, soporte 24/7, internet para eventos, enlace dedicado, operadora de telecomunicaciones"
     },
     "navbar": {
         "home": "INICIO",
