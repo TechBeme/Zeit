@@ -150,7 +150,7 @@ export default function HeroSection() {
             <div className="relative z-10 flex flex-col items-center gap-6 px-6 text-center">
                 {/* Title */}
                 <motion.h1
-                    className="font-[family-name:var(--font-headline)] text-4xl font-bold tracking-tighter leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl text-[#e5e2e1]"
+                    className="font-[family-name:var(--font-headline)] text-3xl font-bold tracking-tighter leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl text-[#e5e2e1]"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
@@ -162,7 +162,7 @@ export default function HeroSection() {
 
                 {/* Subtitle */}
                 <motion.p
-                    className="font-[family-name:var(--font-headline)] text-2xl font-bold tracking-tighter leading-tight sm:text-3xl md:text-4xl lg:text-5xl text-[#f6be39]"
+                    className="font-[family-name:var(--font-headline)] text-xl font-bold tracking-tighter leading-tight sm:text-3xl md:text-4xl lg:text-5xl text-[#f6be39]"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
@@ -253,7 +253,7 @@ export default function HeroSection() {
                             onMouseMove={handleBtnMouseMove}
                             onMouseEnter={() => setBtnHovered(true)}
                             onMouseLeave={() => setBtnHovered(false)}
-                            className="relative z-10 inline-flex items-center gap-2.5 rounded-full px-12 py-3.5 text-sm font-normal uppercase tracking-widest text-[#f6be39]/80 font-[family-name:var(--font-label)] transition-colors hover:text-[#f6be39] backdrop-blur-md"
+                            className="relative z-10 inline-flex items-center gap-2.5 rounded-full px-8 py-3 text-xs sm:px-12 sm:py-3.5 sm:text-sm font-normal uppercase tracking-widest text-[#f6be39]/80 font-[family-name:var(--font-label)] transition-colors hover:text-[#f6be39] backdrop-blur-md"
                         >
                             <span
                                 className="pointer-events-none absolute inset-0 rounded-[inherit] transition-opacity duration-300"

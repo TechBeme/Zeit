@@ -170,20 +170,20 @@ export default function SolucoesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="mb-12 text-center md:mb-16"
+                    className="mb-6 text-center sm:mb-12 md:mb-16"
                 >
-                    <h2 className="font-[family-name:var(--font-headline)] text-4xl font-bold tracking-tighter text-[#e5e2e1] md:text-5xl lg:text-6xl">
+                    <h2 className="font-[family-name:var(--font-headline)] text-2xl font-bold tracking-tighter text-[#e5e2e1] sm:text-4xl md:text-5xl lg:text-6xl">
                         {dict.solutions.title}
                     </h2>
-                    <p className="mx-auto mt-4 max-w-xl text-base font-light leading-relaxed text-[#c6c6cf]/60 font-[family-name:var(--font-body)]">
+                    <p className="mx-auto mt-2 max-w-xl text-sm font-light leading-relaxed text-[#c6c6cf]/60 sm:mt-4 sm:text-base font-[family-name:var(--font-body)]">
                         {dict.solutions.subtitle}
                     </p>
                 </motion.div>
 
                 {/* Content area */}
-                <div className="grid gap-10 md:grid-cols-[1fr_1.5fr] md:items-center md:gap-12">
+                <div className="grid gap-6 sm:gap-10 md:grid-cols-[1fr_1.5fr] md:items-center md:gap-12">
                     {/* Left — solution list */}
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-1 sm:gap-2">
                         {dict.solutions.items.map((sol, idx) => {
                             const isActive = idx === active;
                             return (
@@ -191,7 +191,7 @@ export default function SolucoesSection() {
                                     key={idx}
                                     type="button"
                                     onClick={() => setActive(idx)}
-                                    className={`group relative flex items-center gap-4 rounded-2xl px-5 py-4 text-left transition-all duration-500 cursor-pointer ${isActive ? "bg-[#1e1e1e]" : "bg-transparent hover:bg-[#1a1a1a]"
+                                    className={`group relative flex items-center gap-3 rounded-2xl px-4 py-2.5 text-left transition-all duration-500 cursor-pointer sm:gap-4 sm:px-5 sm:py-4 ${isActive ? "bg-[#1e1e1e]" : "bg-transparent hover:bg-[#1a1a1a]"
                                         }`}
                                 >
                                     {/* Active bar */}
@@ -234,7 +234,7 @@ export default function SolucoesSection() {
                     </div>
 
                     {/* Right — featured card */}
-                    <div className="relative min-h-[320px] md:min-h-[380px]">
+                    <div className="relative min-h-[260px] sm:min-h-[320px] md:min-h-[380px]">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={active}
@@ -245,7 +245,7 @@ export default function SolucoesSection() {
                                 className="absolute inset-0"
                             >
                                 <div
-                                    className="flex h-full flex-col justify-between rounded-3xl border border-[#4f4634]/15 p-8 md:p-10"
+                                    className="flex h-full flex-col justify-between rounded-3xl border border-[#4f4634]/15 p-5 sm:p-8 md:p-10"
                                     style={{
                                         background:
                                             "radial-gradient(ellipse 80% 80% at 50% 40%, rgba(42,42,42,0.6) 0%, rgba(26,26,26,0.6) 50%, rgba(19,19,19,0.6) 100%)",
@@ -260,23 +260,23 @@ export default function SolucoesSection() {
                                         <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f6be39]/10 text-[#f6be39]">
                                             {SOLUTION_ICONS[active]}
                                         </div>
-                                        <span className="font-[family-name:var(--font-headline)] text-6xl font-bold tracking-tighter text-[#4f4634]/30">
+                                        <span className="font-[family-name:var(--font-headline)] text-4xl font-bold tracking-tighter text-[#4f4634]/30 sm:text-6xl">
                                             {String(active + 1).padStart(2, "0")}
                                         </span>
                                     </div>
 
                                     {/* Content */}
-                                    <div className="mt-8">
-                                        <h3 className="font-[family-name:var(--font-headline)] text-2xl font-bold tracking-tight text-[#e5e2e1] md:text-3xl">
+                                    <div className="mt-4 sm:mt-8">
+                                        <h3 className="font-[family-name:var(--font-headline)] text-xl font-bold tracking-tight text-[#e5e2e1] sm:text-2xl md:text-3xl">
                                             {dict.solutions.items[active].title}
                                         </h3>
-                                        <p className="mt-4 text-base leading-relaxed text-[#c6c6cf]/60 font-[family-name:var(--font-body)]">
+                                        <p className="mt-2 text-sm leading-relaxed text-[#c6c6cf]/60 sm:mt-4 sm:text-base font-[family-name:var(--font-body)]">
                                             {dict.solutions.items[active].description}
                                         </p>
                                     </div>
 
                                     {/* Bottom accent line */}
-                                    <div className="mt-8 h-[1px] w-full bg-gradient-to-r from-[#f6be39]/20 via-[#f6be39]/5 to-transparent" />
+                                    <div className="mt-4 h-[1px] w-full bg-gradient-to-r from-[#f6be39]/20 via-[#f6be39]/5 to-transparent sm:mt-8" />
                                 </div>
                             </motion.div>
                         </AnimatePresence>

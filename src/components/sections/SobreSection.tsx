@@ -146,8 +146,8 @@ export default function SobreSection() {
                     }}
                 />
 
-                <div className="relative z-10 mx-auto w-full max-w-6xl py-20 lg:py-0">
-                    <div className="grid items-center gap-16 md:grid-cols-[1fr_1fr] md:gap-20">
+                <div className="relative z-10 mx-auto w-full max-w-6xl py-10 sm:py-20 lg:py-0">
+                    <div className="grid items-center gap-8 sm:gap-16 md:grid-cols-[1fr_1fr] md:gap-20">
                         {/* Left — Brand visual */}
                         <motion.div
                             initial={{ opacity: 0, x: -40 }}
@@ -166,16 +166,16 @@ export default function SobreSection() {
                                     }}
                                 />
                                 {/* Logo + Text lockup */}
-                                <div className="relative flex items-center gap-5">
+                                <div className="relative flex items-center gap-3 sm:gap-5">
                                     <img
                                         src="/logo.png"
                                         alt="Zeit"
-                                        className="h-28 w-auto md:h-36"
+                                        className="h-16 w-auto sm:h-28 md:h-36"
                                     />
                                     <div className="flex flex-col items-start">
                                         <span
                                             ref={zeitRef}
-                                            className="font-[family-name:var(--font-headline)] text-7xl font-bold tracking-tighter uppercase text-[#e5e2e1] md:text-8xl"
+                                            className="font-[family-name:var(--font-headline)] text-5xl font-bold tracking-tighter uppercase text-[#e5e2e1] sm:text-7xl md:text-8xl"
                                             style={{ lineHeight: 1 }}
                                         >
                                             Zeit
@@ -203,7 +203,7 @@ export default function SobreSection() {
                                 <span className="font-[family-name:var(--font-label)] text-xs font-medium uppercase tracking-[0.25em] text-[#f6be39]">
                                     {dict.about.label}
                                 </span>
-                                <h2 className="mt-4 font-[family-name:var(--font-headline)] text-4xl font-bold tracking-tighter text-[#e5e2e1] md:text-5xl lg:text-6xl">
+                                <h2 className="mt-4 font-[family-name:var(--font-headline)] text-2xl font-bold tracking-tighter text-[#e5e2e1] sm:text-4xl md:text-5xl lg:text-6xl">
                                     {dict.about.title}{" "}
                                     <span className="text-[#f6be39]">{dict.about.titleHighlight}</span>
                                 </h2>
@@ -215,10 +215,10 @@ export default function SobreSection() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.7, delay: 0.15 }}
                             >
-                                <p className="mt-6 text-base leading-relaxed text-[#c6c6cf]/70 font-[family-name:var(--font-body)]">
+                                <p className="mt-4 text-sm leading-relaxed text-[#c6c6cf]/70 sm:mt-6 sm:text-base font-[family-name:var(--font-body)]">
                                     {dict.about.description1}
                                 </p>
-                                <p className="mt-4 text-base leading-relaxed text-[#c6c6cf]/50 font-[family-name:var(--font-body)]">
+                                <p className="mt-3 text-sm leading-relaxed text-[#c6c6cf]/50 sm:mt-4 sm:text-base font-[family-name:var(--font-body)]">
                                     {dict.about.description2}
                                 </p>
                             </motion.div>
@@ -229,11 +229,11 @@ export default function SobreSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.7, delay: 0.3 }}
-                                className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4"
+                                className="mt-6 grid grid-cols-2 gap-4 sm:mt-10 sm:gap-6 sm:grid-cols-4"
                             >
                                 {dict.about.stats.map((stat) => (
                                     <div key={stat.label} className="flex flex-col">
-                                        <span className="font-[family-name:var(--font-headline)] text-3xl font-bold tracking-tight text-[#f6be39]">
+                                        <span className="font-[family-name:var(--font-headline)] text-2xl font-bold tracking-tight text-[#f6be39] sm:text-3xl">
                                             {stat.value}
                                         </span>
                                         <span className="mt-1 font-[family-name:var(--font-label)] text-xs font-medium uppercase tracking-wider text-[#c6c6cf]/40">
@@ -249,7 +249,7 @@ export default function SobreSection() {
                                 whileInView={{ opacity: 1, scaleX: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, delay: 0.45 }}
-                                className="mt-10 h-[1px] w-full origin-left bg-gradient-to-r from-[#f6be39]/30 via-[#4f4634]/20 to-transparent"
+                                className="mt-6 h-[1px] w-full origin-left bg-gradient-to-r from-[#f6be39]/30 via-[#4f4634]/20 to-transparent sm:mt-10"
                             />
                         </div>
                     </div>
