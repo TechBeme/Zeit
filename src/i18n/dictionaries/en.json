@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "title": "Zeit | Connecting your business at the right time",
+        "description": "Telecommunications and fiber optic solutions for businesses and events. High-performance B2B connectivity.",
+        "ogTitle": "Zeit | Connecting your business at the right time",
+        "ogDescription": "Telecommunications and fiber optic solutions for businesses and events."
+    },
+    "navbar": {
+        "home": "HOME",
+        "solutions": "SOLUTIONS",
+        "about": "ABOUT",
+        "openMenu": "Open menu"
+    },
+    "hero": {
+        "title1": "Connecting",
+        "title2": "your business",
+        "subtitle": "at the right time",
+        "cta": "LEARN MORE"
+    },
+    "solutions": {
+        "title": "Solutions",
+        "subtitle": "High-performance enterprise connectivity with dedicated fiber optics.",
+        "items": [
+            {
+                "title": "Dedicated Internet",
+                "description": "Dedicated link with symmetric bandwidth guarantee, 99.5% SLA, and 24/7 support for operations that can't stop."
+            },
+            {
+                "title": "Data Center & Colocation",
+                "description": "Tier III infrastructure with full redundancy, continuous monitoring, and low-latency connectivity for your servers."
+            },
+            {
+                "title": "Point-to-Point Fiber",
+                "description": "Direct connection between branches with exclusive fiber, ultra-low latency, and total security for corporate data traffic."
+            },
+            {
+                "title": "Managed Firewall",
+                "description": "Advanced perimeter protection with complete management, real-time threat monitoring, and customized policies."
+            }
+        ]
+    },
+    "about": {
+        "label": "About us",
+        "title": "Connectivity that",
+        "titleHighlight": "transforms",
+        "description1": "Zeit is a telecommunications operator specialized in high-performance corporate solutions. With our own fiber optic infrastructure, we deliver dedicated, secure, and scalable connectivity for businesses that can't afford downtime.",
+        "description2": "Our mission is to be the invisible backbone that supports our clients' digital transformation with ultra-low latency, full redundancy, and technical support that understands the criticality of your business.",
+        "stats": [
+            {
+                "value": "99.5%",
+                "label": "Guaranteed SLA"
+            },
+            {
+                "value": "24/7",
+                "label": "Technical Support"
+            },
+            {
+                "value": "500+",
+                "label": "Companies Served"
+            },
+            {
+                "value": "10k+",
+                "label": "Km of Fiber Optics"
+            }
+        ]
+    },
+    "infrastructure": {
+        "title": "INFRASTRUCTURE",
+        "description": "Own fiber optic network with redundancy and high availability."
+    },
+    "footer": {
+        "copyright": "All rights reserved."
+    }
+}

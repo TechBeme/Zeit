@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "title": "Zeit | Conectando o seu negócio no tempo certo",
+        "description": "Soluções de telecomunicações e fibra óptica para empresas e eventos. Conectividade B2B de alta performance.",
+        "ogTitle": "Zeit | Conectando o seu negócio no tempo certo",
+        "ogDescription": "Soluções de telecomunicações e fibra óptica para empresas e eventos."
+    },
+    "navbar": {
+        "home": "INÍCIO",
+        "solutions": "SOLUÇÕES",
+        "about": "SOBRE",
+        "openMenu": "Abrir menu"
+    },
+    "hero": {
+        "title1": "Conectando",
+        "title2": "a sua empresa",
+        "subtitle": "no tempo certo",
+        "cta": "SAIBA MAIS"
+    },
+    "solutions": {
+        "title": "Soluções",
+        "subtitle": "Conectividade empresarial de alta performance com fibra óptica dedicada.",
+        "items": [
+            {
+                "title": "Internet Dedicada",
+                "description": "Link dedicado com garantia de banda simétrica, SLA de 99,5% e suporte 24/7 para operações que não podem parar."
+            },
+            {
+                "title": "Data Center & Colocation",
+                "description": "Infraestrutura Tier III com redundância total, monitoramento contínuo e conectividade de baixa latência para seus servidores."
+            },
+            {
+                "title": "Fibra Ponto a Ponto",
+                "description": "Conexão direta entre filiais com fibra exclusiva, latência ultrabaixa e total segurança no tráfego de dados corporativos."
+            },
+            {
+                "title": "Firewall Gerenciado",
+                "description": "Proteção perimetral avançada com gestão completa, monitoramento de ameaças em tempo real e políticas personalizadas."
+            }
+        ]
+    },
+    "about": {
+        "label": "Sobre nós",
+        "title": "Conectividade que",
+        "titleHighlight": "transforma",
+        "description1": "A Zeit é uma operadora de telecomunicações especializada em soluções corporativas de alta performance. Com infraestrutura própria de fibra óptica, entregamos conectividade dedicada, segura e escalável para empresas que não podem parar.",
+        "description2": "Nossa missão é ser o backbone invisível que sustenta a transformação digital dos nossos clientes com latência ultrabaixa, redundância total e suporte técnico que entende a criticidade do seu negócio.",
+        "stats": [
+            {
+                "value": "99,5%",
+                "label": "SLA Garantido"
+            },
+            {
+                "value": "24/7",
+                "label": "Suporte Técnico"
+            },
+            {
+                "value": "500+",
+                "label": "Empresas Atendidas"
+            },
+            {
+                "value": "10k+",
+                "label": "Km de Fibra Óptica"
+            }
+        ]
+    },
+    "infrastructure": {
+        "title": "INFRAESTRUTURA",
+        "description": "Rede própria de fibra óptica com redundância e alta disponibilidade."
+    },
+    "footer": {
+        "copyright": "Todos os direitos reservados."
+    }
+}
